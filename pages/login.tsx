@@ -39,6 +39,7 @@ function login() {
         layout="fill"
         className="-z-10 !hidden sm:!inline opacity-60"
         objectFit="cover"
+        alt=""
       />
 
       <img src="/images/logo.png" alt="Logo" className="top-4 left-4 md:top-6 object-contain md:left-12 absolute cursor-pointer"
