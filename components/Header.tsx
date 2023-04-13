@@ -2,6 +2,7 @@ import { HiBell } from "react-icons/hi";
 import Link from 'next/link'
 import { BsSearchHeartFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
+import Image from 'next/legacy/image'
 
 function Header() {
   const[isScrolled, setIsScrolled] = useState(false)
@@ -25,7 +26,7 @@ function Header() {
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-3 md:space-x-10">
-        <img src="/images/logo.png" alt="Logo" className="h-10" />
+        <Image src="/images/logo.png" alt="Logo" className="h-10" />
 
         <ul className="hidden space-x-4 md:flex">
           <li className="headerLink cursor-default font-semibold text-white hover:text-white">Home</li>
@@ -42,7 +43,7 @@ function Header() {
         <p className="hidden lg:inline text-white text-sm font-light cursor-pointer">Kids</p>
         <HiBell className="text-white h-7 w-7" />
         <Link href="/account">
-          <img src="https://rb.gy/g1pwyx" alt="" className="rounded cursor-pointer" />
+          <Image src="https://rb.gy/g1pwyx" alt="" className="rounded cursor-pointer" />
         </Link>
 
       </div>
