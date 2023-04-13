@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
 import useAuth from '../hooks/useAuth'
+import Image from 'next/legacy/image'
 
 
 function Account() {
@@ -20,15 +21,16 @@ function Account() {
       </Head>
       <header className={`bg-[#141414]`}>
         <Link href="/">
-          <img
+          <Image
             src="https://rb.gy/ulxxee"
             width={120}
             height={120}
+            alt=""
             className="cursor-pointer object-contain"
           />
         </Link>
         <Link href="/account">
-          <img
+          <Image
             src="https://rb.gy/g1pwyx"
             alt=""
             className="cursor-pointer rounded"
