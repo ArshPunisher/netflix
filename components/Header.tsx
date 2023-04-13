@@ -2,7 +2,6 @@ import { HiBell } from "react-icons/hi";
 import Link from 'next/link'
 import { BsSearchHeartFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
-import BasicMenu from "./BasicMenu";
 
 function Header() {
   const[isScrolled, setIsScrolled] = useState(false)
@@ -27,7 +26,6 @@ function Header() {
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-3 md:space-x-10">
         <img src="/images/logo.png" alt="Logo" className="h-10" />
-        <BasicMenu />
 
         <ul className="hidden space-x-4 md:flex">
           <li className="headerLink cursor-default font-semibold text-white hover:text-white">Home</li>
