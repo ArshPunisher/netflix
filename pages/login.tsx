@@ -42,7 +42,7 @@ function login() {
         alt=""
       />
 
-      <img src="/images/logo.png" alt="Logo" className="top-4 left-4 md:top-6 object-contain md:left-12 absolute cursor-pointer"
+      <Image src="/images/logo.png" alt="Logo" className="top-4 left-4 md:top-6 object-contain md:left-12 absolute cursor-pointer"
         height={167} width={167}
       />
 
