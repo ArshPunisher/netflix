@@ -1,15 +1,12 @@
-import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
 import useAuth from '../hooks/useAuth'
-import Image from 'next/legacy/image'
 
 
 function Account() {
   
   const { user, logout, loading } = useAuth()
-  const [isBillingLoading, setBillingLoading] = useState(false)
 
   if (loading) return null
 
@@ -19,9 +16,9 @@ function Account() {
         <title>Account Settings - Netflix</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={`bg-[#141414]`}>
+      <header className="bg-[#141414]">
         <Link href="/">
-          <Image
+          <img
             src="https://rb.gy/ulxxee"
             width={120}
             height={120}
@@ -30,7 +27,7 @@ function Account() {
           />
         </Link>
         <Link href="/account">
-          <Image
+          <img
             src="https://rb.gy/g1pwyx"
             alt=""
             className="cursor-pointer rounded"
