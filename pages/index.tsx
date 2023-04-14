@@ -6,7 +6,6 @@ import Header from "@/components/Header";
 import Modal from "@/components/Modal";
 import Row from '../components/Row'
 import useAuth from '../hooks/useAuth'
-import useList from '../hooks/useList'
 import { Movie } from '../typesc'
 import requests from "@/utility/requests";
 
@@ -19,7 +18,6 @@ interface Props {
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
-  // products: Product[]
 }
 
 const Home = ({
@@ -31,13 +29,9 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-  // products,
 }: Props) => {
-  const { user, loading } = useAuth()
   const showModal = useRecoilValue(modalState)
   const movie = useRecoilValue(movieState)
-  const list = useList(user?.uid)
-
 
   return (
     <div
@@ -61,8 +55,6 @@ const Home = ({
           <Row title="Trending Now" movies={trendingNow} />
           <Row title="Top Rated" movies={topRated} />
           <Row title="Action Thrillers" movies={actionMovies} />
-          
-          {/* {list.length > 0 && <Row title="My List" movies={list} />} */}
 
           <Row title="Comedies" movies={comedyMovies} />
           <Row title="Scary Movies" movies={horrorMovies} />
@@ -78,13 +70,6 @@ const Home = ({
 export default Home
 
 export const getServerSideProps = async () => {
-  // const products = await getProducts(payments, {
-  //   includePrices: true,
-  //   activeOnly: true,
-  // })
-  //   .then((res) => res)
-  //   .catch((error) => console.log(error.message))
-
   const [
     netflixOriginals,
     trendingNow,
@@ -115,7 +100,6 @@ export const getServerSideProps = async () => {
       horrorMovies: horrorMovies.results,
       romanceMovies: romanceMovies.results,
       documentaries: documentaries.results,
-      // products,
     },
   }
 }
