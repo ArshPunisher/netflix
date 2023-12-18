@@ -42,10 +42,6 @@ function Header() {
         <BsSearchHeartFill className="hidden sm:inline h-7 w-7 text-white cursor-pointer" />
         <p className="hidden lg:inline text-white text-sm font-light cursor-pointer">Kids</p>
         <HiBell className="text-white h-7 w-7" />
-        <Link href="/account">
-          <Image src="https://rb.gy/g1pwyx" alt="" className="rounded cursor-pointer" />
-        </Link>
-
       </div>
     </header>
   )
